@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VUC Omnisports - Activités</title>
+  <link rel="stylesheet" href="news_test.css" >
+  <link rel="stylesheet" href="nav.css" >
+  <link rel="stylesheet" href="footer.css" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Barre de navigation directement dans la page -->
+<header>
+  <img src="Logo VUC/OMNISPORT.png" alt="Logo VUC" style="height: 60px; vertical-align: middle; margin-right: 16px;">
+  <h1 style="display: inline-block; vertical-align: middle;">Valenciennes Université Club</h1>
+  <nav>
+    <ul>
+      <li><a href="acceuil.html">Accueil</a></li>
+      <li><a href="activite.html">Activités Sportives</a></li>
+      <li><a href="https://vuc.comiti-sport.fr/activites/school">Inscription</a></li>
+      <li><a href="https://vuc.comiti-sport.fr/activites/shop">Boutique</a></li>
+      <li><a href="calendrier.html">Calendrier</a></li>
+      <li><a href="news.html">Actualités</a></li>
+      <li><a href="conseil.html">Conseil d'administration</a></li>
+    </ul>
+  </nav></header>
+<main>
+  <section class="actualites">
+    <div class="container">
+      <h2>Actualités du Club</h2>
+      <div id="news-slider" class="news-slider"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.getElementById("news-slider");
+
+    fetch("https://sheetdb.io/api/v1/0rgw6vbnghtska?sheet=Actualit%C3%A9")
+            .then(response => response.json())
+            .then(data => {
+              if (!Array.isArray(data)) throw new Error("Données invalides");
+
+              const latestNews = data.slice(-6).reverse(); // 6 dernières actualités
+
+              let index = 0;
+
+              function showNews(i) {
+                const item = latestNews[i];
+                if (!item) return;
+
+                slider.innerHTML = ""; // Vide le contenu
+
+                const card = document.createElement("div");
+                card.className = "news-card animate-in";
+
+                card.innerHTML = `
+            <div class="news-content">
+              <h3>${item.Titre || "Sans titre"}</h3>
+              <p>${item.Description || ""}</p>
+              ${item.Sport && item.Sport !== "Tous" ? `<span class="sport-tag">${item.Sport}</span>` : ""}
+            </div>
+            ${item.Image ? `<img src="${item.Image}" alt="${item.Titre}" class="news-image">` : ""}
+          `;
+
+                slider.appendChild(card);
+
+                // Supprimer l'animation entrante et appliquer la sortie après 9s
+                setTimeout(() => {
+                  card.classList.remove("animate-in");
+                  card.classList.add("animate-out");
+                }, 9000);
+
+                // Passer à l'actualité suivante après 10s
+                setTimeout(() => {
+                  index = (index + 1) % latestNews.length;
+                  showNews(index);
+                }, 10000);
+              }
+
+              showNews(index);
+            })
+            .catch(error => {
+              console.error("Erreur lors du chargement des actualités :", error);
+              slider.innerHTML = "<p>Impossible de charger les actualités.</p>";
+            });
+  });
+</script>
+<div id="footer-container"></div>
+<script>
+  fetch('../footer.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+          });
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* Style du header avec navigation */
+header {
+    background-color: #00B8D9; /* Bleu turquoise */
+    width: 100%;
+    padding: 15px 0; /* Augmenter la hauteur du header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Style principal du formulaire d'inscription */
+.registration-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
+    text-align: center;
+    border-top: 5px solid #00B8D9; /* Ligne bleue turquoise en haut */
+}
+
+/* Titre du formulaire */
+.registration-container h1 {
+    color: #00B8D9; /* Bleu turquoise */
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Formulaire d'inscription */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacement plus grand entre les éléments */
+}
+
+.registration-form label {
+    font-size: 1.1rem; /* Taille légèrement plus grande pour les labels */
+    color: #333;
+}
+
+.registration-form input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajout de shadow autour des champs */
+}
+
+.registration-form input:focus {
+    border-color: #00B8D9; /* Bordure turquoise au focus */
+    box-shadow: 0 0 8px rgba(0, 184, 217, 0.4); /* Effet de glow turquoise */
+}
+
+/* Bouton de soumission */
+.registration-form button {
+    background-color: #00B8D9; /* Bleu turquoise */
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.registration-form button:hover {
+    background-color: #00A0B2; /* Couleur plus sombre pour l'effet hover */
+    transform: scale(1.05); /* Légère agrandissement du bouton */
+}
+
+/* Lien vers la page de connexion */
+.login-link {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #00B8D9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    color: #008C99; /* Changement de couleur au survol */
+}
+
+/* Animation de fade-in pour le formulaire */
+.registration-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

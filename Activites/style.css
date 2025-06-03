@@ -1,0 +1,362 @@
+:root {
+    --bleu-vif: #00acc1;          /* Couleur principale vive */
+    --bleu-nuit: #004d5a;         /* Bleu profond contrastant */
+    --accent: #00e5ff;            /* Ligne de style flashy */
+    --gris-text: #333;
+    --gris-clair: #67635f;
+    --blanc: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--gris-text);
+    line-height: 1.6;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 400%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Assure que l'image est derrière le contenu */
+}
+
+
+h1 {
+    color: var(--blanc);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--bleu-vif);
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+ul {
+    padding-left: 1.2rem;
+    list-style-type: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--gris-text);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px; /* un peu plus grand pour le confort visuel */
+    padding: 2rem;
+    position: relative;
+    gap: 2rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* LOGO FLOTTANT À GAUCHE */
+.hero-logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
+    width: 150px;
+    z-index: 3;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* TEXTE CENTRÉ */
+.hero-text {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    color: #333;
+    font-size: 1rem;
+    font-style: italic; /* Texte en italique */
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateX(200px);
+
+}
+
+/* IMAGE À DROITE */
+.hero-img {
+    width: 30%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    z-index: 1;
+    margin-left: auto; /* pousse l'image tout à droite */
+}
+
+
+
+.logo {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.contact-materiel, .horaires-tarifs, .infos-pratiques {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    position: relative;
+    /* animation: backgroundMove 5s infinite linear; /* Animation de déplacement */
+}
+
+.contact p,
+.materiel p,
+.horaires p,
+.tarifs p,
+.lieu p {
+    text-align: center;
+}
+/*
+@keyframes backgroundMove {
+    0% {
+        background-position: center;
+    }
+    50% {
+        background-position: top center;
+    }
+    100% {
+        background-position: center;
+    }*/
+
+.contact, .materiel, .horaires, .tarifs, .lieu , .actus-calendrier{
+    flex: 1;
+    min-width: 280px;
+    background: var(--blanc);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+/* Vanta Canvas */
+.vanta-canvas {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1;
+}
+
+.contact:hover, .materiel:hover, .horaires:hover, .tarifs:hover, .lieu:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+i {
+    margin-right: 0.5rem;
+    color: var(--bleu-vif);
+}
+
+button {
+    background-color: var(--bleu-vif);
+    color: var(--blanc);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--bleu-nuit);
+}
+
+#bouton-inscription {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-inscription {
+    background-color: #0097a7;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-inscription:hover {
+    background-color: #007d91;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: var(--bleu-nuit);
+    color: var(--blanc);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: var(--blanc);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+    }
+    .hero-logo {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+    }
+    .hero-text {
+        transform: none;
+        width: 80%;
+    }
+    .hero-img {
+        width: 80%;
+        height: 200px;
+    }
+}
+
+
+.actus-calendrier {
+    display: flex;
+    flex-direction: column; /* Empiler les boutons verticalement */
+    align-items: flex-start; /* Alignement à gauche */
+    gap: 1rem; /* Espacement entre les boutons */
+    flex: 1; /* Faire en sorte que cette section prenne toute la largeur disponible */
+}
+
+.actus-calendrier button {
+    width: 100%; /* Les boutons prendront toute la largeur de leur parent */
+    padding: 1rem;
+    border: none;
+    background-color: #06dddd;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.actus-calendrier button:hover {
+    background-color: #00b39e; /* Changer la couleur au survol */
+}
+
+.lieu h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.lieu p {
+    margin-bottom: 1rem;
+}
+
+.lieu:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-gym {
+    border-radius: 20px;
+    padding: 24px;
+    background: linear-gradient(to bottom right, #ffffff, #f1f9f9);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 2px solid #e0f7fa;
+}
+
+
+.card-gym h3 {
+    font-size: 1.6em;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: #004d40;
+}
+
+.card-gym p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.card-gym i {
+    font-size: 2em;
+    margin-bottom: 12px;
+    color: #0097a7;
+}
+
+.card-gym .btn {
+    margin-top: 16px;
+    background-color: #0097a7;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.card-gym .btn:hover {
+    background-color: #007c91;
+}

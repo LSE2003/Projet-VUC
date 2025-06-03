@@ -1,0 +1,44 @@
+.printemps-body {
+    background: linear-gradient(to bottom, #E8F5E9, #FFF3F6); /* vert pastel vers rose pâle */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #33691E; /* vert feuillage */
+}
+
+.printemps-body .section-header {
+    background: linear-gradient(to right, #AED581, #FFCDD2); /* vert tendre & rose clair */
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #3E2723;
+    text-align: center;
+}
+
+.printemps-body .section h2 {
+    font-family: 'Marcellus SC', serif;
+    font-size: 2.2em;
+    color: #689F38;
+    text-align: center;
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+.printemps-body .section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #DCEDC8, #F8BBD0);
+    border-radius: 4px;
+}
+
+.printemps-body .btn-green {
+    background-color: #66BB6A;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.printemps-body .btn-green:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+}

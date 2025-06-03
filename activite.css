@@ -1,0 +1,277 @@
+/* RESET DE BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  background-image: url('../Fond/fond.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* SECTION HÉROS */
+.hero {
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem; /* Augmentation du padding pour plus de respiration */
+  border-radius: 20px;
+  margin-bottom: 4rem; /* Un peu plus d'espace en bas */
+}
+
+.hero h1 {
+  font-size: 3.5rem; /* Augmenté pour un effet plus percutant */
+  margin-bottom: 1.5rem; /* Un peu plus d'espace en dessous */
+  font-weight: 700; /* Renforce le titre */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile pour le titre */
+}
+
+.hero p {
+  font-size: 1.4rem; /* Agrandi pour plus de lisibilité */
+  margin-bottom: 2.5rem; /* Un peu plus d'espace pour équilibrer */
+  font-weight: 300; /* Légèrement plus léger pour le texte */
+  line-height: 1.6; /* Espacement des lignes pour plus de clarté */
+}
+
+.hero h1, .hero p {
+  transition: all 0.3s ease; /* Ajoute une transition douce pour les changements */
+}
+
+.hero h1:hover, .hero p:hover {
+  color: #e0f7ff; /* Changement de couleur au survol */
+  text-decoration: underline; /* Souligner le texte au survol */
+}
+
+.cta {
+  background-color: white;
+  color: #0083b0;
+  padding: 1rem 2rem; /* Un peu plus large pour le bouton */
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Ajout d'une transition pour l'effet de transformation */
+  display: inline-block;
+}
+
+.cta:hover {
+  background-color: #e0f7ff;
+  transform: translateY(-3px); /* Léger effet de survol pour attirer l'attention */
+}
+
+.cta:active {
+  transform: translateY(2px); /* Petit effet au clic */
+}
+
+/* 🟦 CARDS CONTAINER */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* 🟪 CARTE PRINCIPALE (avec image de fond) */
+.card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 20px;
+  color: white;
+  background-size: 100% auto; /* Largeur à 100%, hauteur automatique */
+  background-repeat: repeat-y; /* Répète uniquement en hauteur */
+  background-position: top center; /* Aligne au centre horizontalement */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  flex: 1 1 calc(33.33% - 2rem); /* 3 par ligne */
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  display: flex; /* Utilise Flexbox */
+  flex-direction: column; /* Place les éléments en colonne */
+  justify-content: flex-start;
+  align-items: center; /* Centre horizontalement */
+  text-align: center; /* Centre le texte */
+
+}
+
+
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 📷 IMAGE DANS LES CARTES */
+.card img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* 🎨 THEMES PAR SECTION */
+.interieur {
+  background-image: url('Fond/theme-interieur.png');
+}
+
+.bienetre {
+  background-image: url('Fond/theme-bien etre.png');
+}
+
+.nautique {
+  background-image: url('Fond/theme-eau.png');
+}
+
+.combat {
+  background-image: url('Fond/theme-feu.png');
+}
+
+.pleinair {
+  background-image: url('Fond/theme-nature.png');
+}
+
+.vacances {
+  background-image: url('Fond/theme-vacances.png');
+}
+
+/* 🟩 CARTES D'ACTIVITÉ (EN COLONNE) */
+.activity-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #222;
+  border-radius: 15px;
+  width: 250px;
+  height: 150px;
+  padding: 1rem;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.activity-card .btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(to right, #0083b0, #00b4db);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.activity-card .btn:hover {
+  background: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+/* 🔄 RESPONSIVE */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 1rem); /* 2 cartes par ligne */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* 1 carte par ligne */
+  }
+}
+
+.activite-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  flex: 1 1 calc(30% - 2rem);
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+#vanta-combat {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+#vanta-combat img {
+  position: relative;
+  z-index: 1;
+}
+
+#vanta-pleinair {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+#vanta-pleinair img {
+  position: relative;
+  z-index: 1;
+}
+
+#vanta-nautique {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+#vanta-nautique img {
+  position: relative;
+  z-index: 1;
+}
+
+#vanta-bienetre {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+#vanta-bienetre img {
+  position: relative;
+  z-index: 1;
+}

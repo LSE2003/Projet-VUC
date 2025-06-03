@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test Animations Sport</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        section {
+            position: relative;
+            height: 300px;
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        section h2 {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            z-index: 10;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
+        }
+        .vanta-canvas {
+            position: absolute !important;
+            top: 0; left: 0; width: 100% !important; height: 100% !important;
+            z-index: 1;
+        }
+        /* Texte au-dessus de l'animation */
+        .content {
+            position: relative;
+            z-index: 5;
+            padding: 80px 20px 20px 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-shadow: 0 0 5px rgba(0,0,0,0.7);
+        }
+    </style>
+</head>
+<body>
+
+<section id="combat">
+    <h2>Sports de combat</h2>
+    <div class="content">Énergie, intensité, feu intérieur</div>
+</section>
+
+<section id="nautique">
+    <h2>Sports nautiques</h2>
+    <div class="content">Fluidité et mouvement des vagues</div>
+</section>
+
+<section id="bienetre">
+    <h2>Bien-être</h2>
+    <div class="content">Calme, relaxation, chaleur jaune/orange</div>
+</section>
+
+<section id="nature">
+    <h2>Sports nature</h2>
+    <div class="content">Fraîcheur et vie naturelle en vert</div>
+</section>
+
+<section id="interieur">
+    <h2>Sports d'intérieur</h2>
+    <div class="content">Dynamisme et énergie</div>
+</section>
+
+<!-- Scripts Vanta -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.clouds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.dots.min.js"></script>
+
+<script>
+    // Combat : NET (flammes stylisées, tension)
+    // Sport de combat : FOG avec ambiance feu
+    VANTA.FOG({
+        el: "#combat",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        highlightColor: 0xff6600,
+        midtoneColor: 0xff3300,
+        lowlightColor: 0x200000,
+        baseColor: 0x000000,
+        blurFactor: 0.5,
+        speed: 2.5,
+        zoom: 1.2
+    });
+
+    // Sport nautique : WAVES effet océan stylé
+    VANTA.WAVES({
+        el: "#nautique",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        color: 0x0099ff,
+        shininess: 80,
+        waveHeight: 20,
+        waveSpeed: 1.2,
+        zoom: 1.2
+    });
+
+    // Bien-être : ambiance douce orange/jaune
+    VANTA.CLOUDS({
+        el: "#bienetre",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        highlightColor: 0xffb347,
+        midtoneColor: 0xffda7b,
+        lowlightColor: 0xffa500,
+        baseColor: 0x422800,
+        speed: 1.2,
+        zoom: 0.8
+    });
+
+    // Nature : oiseaux verts
+    VANTA.BIRDS({
+        el: "#nature",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        backgroundColor: 0x113311,
+        color1: 0x88cc88,
+        color2: 0x44aa44,
+        birdSize: 1.3,
+        quantity: 4,
+        wingSpan: 25,
+        speedLimit: 2.5,
+        separation: 50,
+        cohesion: 30
+    });
+
+    // Intérieur : ambiance numérique moderne
+    VANTA.DOTS({
+        el: "#interieur",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        color: 0xffffff,
+        backgroundColor: 0x222222,
+        size: 3.0,
+        spacing: 30
+    });
+</script>
+
+</body>
+</html>

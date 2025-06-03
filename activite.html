@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VUC Omnisports - Activités</title>
+  <link rel="stylesheet" href="activite.css" >
+  <link rel="stylesheet" href="footer.css" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css" >
+  <!-- Liens JS pour charger Vanta -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.halo.min.js"></script>
+</head>
+<body>
+<header class="vanta-header">
+  <img src="Logo_VUC/OMNISPORT.png" alt="Logo VUC" style="height: 60px; vertical-align: middle; margin-right: 16px;">
+  <h1 style="display: inline-block; vertical-align: middle;">Valenciennes Université Club</h1>
+  <nav>
+    <ul>
+      <li><a href="acceuil.html">Accueil</a></li>
+      <li><a href="activite.html">Activités Sportives</a></li>
+      <li><a href="https://vuc.comiti-sport.fr/activites/school">Inscription</a></li>
+      <li><a href="https://vuc.comiti-sport.fr/activites/shop">Boutique</a></li>
+      <li><a href="calendrier.html">Calendrier</a></li>
+      <li><a href="conseil.html">Conseil d'administration</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  VANTA.HALO({
+    el: ".vanta-header",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    baseColor: 0x00bcd4,     // turquoise clair
+    amplitudeFactor: 2.5,
+    sizeFactor: 1.5
+  });
+</script>
+<main>
+  <section class="hero">
+    <h1>Des activités pour bouger, explorer, vibrer</h1>
+    <p>Découvrez des disciplines variées et laissez-vous surprendre</p>
+  </section>
+
+  <!-- Cartes d'activités -->
+  <section id="activites" class="activite-section">
+    <!-- Sports d’intérieur -->
+    <div class="card interieur">
+      <img src="Logo/icon-interieur.png" alt="Sport intérieur" />
+      <h2>Sports d’intérieur</h2>
+      <div class="activity-cards">
+        <div class="activity-card">
+          <h3>Gymnastique</h3>
+          <a href="Activites/gymnastique.html" class="btn">Découvrir</a>
+        </div>
+        <div class="activity-card">
+          <h3>Badminton</h3>
+          <a href="Activites/badminton.html" class="btn">Découvrir</a>
+        </div>
+        <div class="activity-card">
+          <h3>Tir à l’arc</h3>
+          <a href="Activites/tir-arc.html" class="btn">Découvrir</a>
+        </div>
+        <div class="activity-card">
+          <h3>Escalade</h3>
+          <a href="Activites/escalade.html" class="btn">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bien-être -->
+    <div class="card bienetre">
+      <img src="Logo/icon_bienetre.png" alt="Bien-être" />
+      <h2>Bien-être</h2>
+      <div class="activity-cards">
+        <div class="activity-card">
+          <h3>Qi-Qong</h3>
+          <a href="Activites/qi-qong.html" class="btn">Découvrir</a>
+        </div>
+        <div class="activity-card">
+          <h3>Valgym</h3>
+          <a href="Activites/valgym.html" class="btn">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sports nautiques -->
+    <div class="card nautique">
+      <img src="Logo/icon-nautique.png" alt="Activités nautiques" />
+      <h2>Activités nautiques</h2>
+      <div class="activity-cards">
+        <div class="activity-card">
+          <h3>Aviron</h3>
+          <a href="Activites/aviron.html" class="btn">Découvrir</a>
+        </div>
+        <div class="activity-card">
+          <h3>Canoé-Kayak</h3>
+          <a href="Activites/canoe.html" class="btn">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sports de combat -->
+    <div class="card combat">
+      <img src="Logo/icon-combat.png" alt="Sports de combat" />
+      <h2>Sports de combat</h2>
+      <div class="activity-cards">
+        <div class="activity-card">
+          <h3>Judo</h3>
+          <a href="Activites/judo.html" class="btn">Découvrir</a>
+        </div>
+        <div class="activity-card">
+          <h3>Kick-Boxing</h3>
+          <a href="Activites/boxe.html" class="btn">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plein air -->
+    <div class="card pleinair">
+      <img src="Logo/icon-pleinair.png" alt="Activités plein air" />
+      <h2>Activités de plein air</h2>
+      <div class="activity-cards">
+        <div class="activity-card">
+          <h3>Cross-Training</h3>
+          <a href="Activites/cross-training.html" class="btn">Découvrir</a>
+        </div>
+        <div class="activity-card">
+          <h3>Sport Nature</h3>
+          <a href="Activites/sport-nature.html" class="btn">Découvrir</a>
+        </div>
+        <div class="activity-card">
+          <h3>Paintball</h3>
+          <a href="Activites/paintball.html" class="btn">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card vacances">
+      <img src="Logo/jardin-denfants.png" alt="Vacances sportives" />
+      <h2>Vacances sportives</h2>
+      <div class="activity-cards">
+        <div class="activity-card">
+          <h3>VUC Vacances</h3>
+          <a href="VUC_Vacances/Vuc_vacances.html" class="btn">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+<div id="footer-container"></div>
+<script>
+  fetch('footer.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+          });
+</script>
+</body>
+</html>

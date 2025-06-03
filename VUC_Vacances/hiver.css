@@ -1,0 +1,47 @@
+.hiver-body {
+    background: linear-gradient(to bottom, #E0F7FA, #F0F4F8); /* bleu glacier vers blanc bleuté */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #004D60; /* bleu nuit froid */
+}
+
+.hiver-body .section-header {
+    background: linear-gradient(to right, #81D4FA, #4FC3F7); /* bleus givrés */
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hiver-body .section h2 {
+    font-family: 'Marcellus SC', serif;
+    font-size: 2.2em;
+    color: #0277BD;
+    position: relative;
+    text-align: center;
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+.hiver-body .section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #B3E5FC, #4FC3F7);
+    border-radius: 4px;
+}
+
+.hiver-body .btn-green {
+    background-color: #0288D1;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+}
+
+.hiver-body .btn-green:hover {
+    background-color: #01579B;
+    transform: translateY(-3px);
+}

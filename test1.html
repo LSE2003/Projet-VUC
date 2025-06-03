@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Valenciennes Université Club</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.halo.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .vanta-header {
+            position: relative;
+            overflow: hidden;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #1195a1;
+            z-index: 0;
+        }
+
+
+
+        .vanta-header * {
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #22a9b6;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 151, 167, 0.2);
+        }
+
+
+
+        header img {
+            height: 60px;
+            vertical-align: middle;
+            margin-right: 16px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #004d40;
+            font-weight: bold;
+            font-size: 1.1em;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 151, 167, 0.15);
+            border: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            background-color: #0097a7;
+            border: 2px solid #004d40;
+            box-shadow: 0 6px 12px rgba(0, 151, 167, 0.3);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+<header class="vanta-header">
+    <div class="header-content">
+        <img src="Logo VUC/OMNISPORT.png" alt="Logo VUC">
+        <h1>Valenciennes Université Club</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="acceuil.html">Accueil</a></li>
+            <li><a href="activite.html">Activités Sportives</a></li>
+            <li><a href="https://vuc.comiti-sport.fr/activites/school">Inscription</a></li>
+            <li><a href="https://vuc.comiti-sport.fr/activites/shop">Boutique</a></li>
+            <li><a href="calendrier.html">Calendrier</a></li>
+            <li><a href="news.html">Actualités</a></li>
+            <li><a href="conseil.html">Conseil d'administration</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    VANTA.HALO({
+        el: ".vanta-header",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        baseColor: 0x00bcd4,     // turquoise clair
+        amplitudeFactor: 2.5,
+        sizeFactor: 1.5
+    });
+</script>
+
+</body>
+</html>

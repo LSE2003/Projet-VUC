@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUC Escalade - Actualités</title>
+    <link rel="stylesheet" href="../Activites/style.css" >
+    <link rel="stylesheet" href="../Activites/style_theme.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../nav.css" >
+    <!-- Liens JS pour charger Vanta -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.halo.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+<body class="page-judo" data-sport="Judo">
+<!-- Barre de navigation directement dans la page -->
+<header class="vanta-header">
+    <img src="../Logo_VUC/OMNISPORT.png" alt="Logo VUC" style="height: 60px; vertical-align: middle; margin-right: 16px;">
+    <h1 style="display: inline-block; vertical-align: middle;">Valenciennes Université Club</h1>
+    <nav>
+        <ul>
+            <li><a href="../acceuil.html">Accueil</a></li>
+            <li><a href="../activite.html">Activités Sportives</a></li>
+            <li><a href="https://vuc.comiti-sport.fr/activites/school">Inscription</a></li>
+            <li><a href="https://vuc.comiti-sport.fr/activites/shop">Boutique</a></li>
+            <li><a href="../calendrier.html">Calendrier</a></li>
+            <li><a href="../conseil.html">Conseil d'administration</a></li>
+        </ul>
+    </nav>
+</header>
+<script>
+    VANTA.HALO({
+        el: ".vanta-header",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        baseColor: 0x00bcd4,     // turquoise clair
+        amplitudeFactor: 2.5,
+        sizeFactor: 1.5
+    });
+</script>
+<main>
+
+    <!-- SECTION 1 : HERO -->
+    <section class="hero-section">
+        <img class="hero-logo" src="../Logo_VUC/JUDO.png" alt="Logo Judo" >
+        <div class="hero-text">
+            <h1>VUC Judo</h1>
+            <p id="description"></p>
+        </div>
+        <div class="hero-img"></div>
+    </section>
+    <section id="contenu-sport">
+        <div class="contact-materiel">
+            <div class="contact">
+                <h2><i class="fas fa-address-book"></i> Contact</h2>
+                <p id="contact"></p>
+            </div>
+            <div class="materiel">
+                <h2><i class="fas fa-toolbox"></i> Matériel nécessaire</h2>
+                <p id="materiel"></p>
+            </div>
+        </div>
+
+        <div class="horaires-tarifs">
+            <div class="horaires">
+                <h2><i class="fas fa-clock"></i> Horaires</h2>
+                <p id="horaires"></p>
+            </div>
+            <div class="tarifs">
+                <h2><i class="fas fa-euro-sign"></i> Tarifs 2024 / 2025</h2>
+                <p id="tarifs"></p>
+                <div id="bouton-inscription" ></div>
+            </div>
+        </div>
+
+
+        <section class="infos-pratiques">
+        <div class="actus-calendrier">
+            <button onclick="window.location.href='news_sports.html?sport=Judo'">Fil d'Actualités</button>
+            <button onclick="window.location.href='calendrier_sports.html?sport=Judo'">Calendrier</button>
+        </div>
+        <div class="lieu">
+            <h2><i class="fas fa-map-marker-alt"></i> Lieu de Pratique</h2>
+            <p id="lieu"></p>
+        </div>
+        </section>
+    </section>
+
+</main>
+<script src="activite_sports.js"></script>
+<script src="vanta_effects.js"></script>
+</body>
+</html>

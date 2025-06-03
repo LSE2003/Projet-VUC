@@ -1,0 +1,53 @@
+
+/* SPORTS D’INTÉRIEUR - Nuances de bleu turquoise, violet, gris */
+.page-gym {
+    background: radial-gradient(circle at 20% 20%, rgba(6, 221, 221, 0.69), #06dddd, #26aeae);
+}
+
+.page-badminton {
+    background: radial-gradient(circle at 80% 20%, #1fcfdf, #2598df, #00bcff);
+}
+
+.page-tir-arc {
+    background: radial-gradient(circle at 40% 60%, rgba(216, 153, 241, 0.56), #9289d1, #dd2fc6);
+}
+
+.page-escalade {
+    background: radial-gradient(circle at 60% 40%, #6d8c99, #a0a1ac, #c6d4e2);
+}
+
+/* BIEN-ÊTRE - Nuances de jaune */
+.page-qi-qong {
+    background: radial-gradient(circle at 30% 50%, #f1b863, #ffea00, rgb(232, 218, 60));
+}
+
+/* ACTIVITÉS NAUTIQUES - Tons d’eau : bleu clair, bleu nuit  */
+.page-aviron {
+    background: radial-gradient(circle at 50% 30%, #38cae4, #79e9fa, #a4dcff);
+}
+
+.page-canoe {
+    background: radial-gradient(circle at 70% 70%, #2598df, #0a3447, #255087);
+}
+
+/* SPORTS DE COMBAT - Tons chauds : rouge, orange */
+.page-judo {
+    background: radial-gradient(circle at 20% 80%, #c85b5b, #ff5050, #ffd3b6);
+}
+
+.page-boxe {
+    background: radial-gradient(circle at 60% 40%, #f3a780, #ff7300, #f4a614);
+}
+
+/* ACTIVITÉS DE PLEIN AIR - Tons vert pistache, vert foret, rose */
+.page-cross-training {
+    background: radial-gradient(circle at 50% 50%, #05f807, rgba(0, 255, 128, 0.8), #4afb03);
+}
+
+.page-nature {
+    background: radial-gradient(circle at 30% 70%, #289728, rgba(40, 151, 40, 0.59), #387738);
+}
+
+.page-paintball {
+    background: radial-gradient(circle at 70% 20%, rgba(241, 153, 153, 0.56), #f4c095, #ff0062);
+}

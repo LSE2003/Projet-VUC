@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUC Omnisports</title>
+    <link rel="stylesheet" href="acceuil.css">
+    <link rel="stylesheet" href="nav.css" >
+    <link rel="stylesheet" href="news.css" >
+    <link rel="stylesheet" href="footer.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Liens JS pour charger Vanta -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.halo.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+</head>
+<body>
+<header class="vanta-header">
+    <img src="Logo_VUC/OMNISPORT.png" alt="Logo VUC" style="height: 60px; vertical-align: middle; margin-right: 16px;">
+    <h1 style="display: inline-block; vertical-align: middle;">Valenciennes Université Club</h1>
+    <nav>
+        <ul>
+            <li><a href="acceuil.html">Accueil</a></li>
+            <li><a href="activite.html">Activités Sportives</a></li>
+            <li><a href="https://vuc.comiti-sport.fr/activites/school">Inscription</a></li>
+            <li><a href="https://vuc.comiti-sport.fr/activites/shop">Boutique</a></li>
+            <li><a href="calendrier.html">Calendrier</a></li>
+            <li><a href="conseil.html">Conseil d'administration</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    VANTA.HALO({
+        el: ".vanta-header",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        baseColor: 0x00bcd4,     // turquoise clair
+        amplitudeFactor: 2.5,
+        sizeFactor: 1.5
+    });
+</script>
+<main>
+    <section class="actualites">
+        <div class="container">
+            <h2 class="visually-hidden">Actualités</h2>
+            <div id="news-slider" class="news-slider"></div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="text-hero">
+            <h2>Le club omnisports pour tous</h2>
+            <p>Qu’importe votre âge, votre genre, votre lieu de résidence, votre niveau de pratique, que vous soyez étudiant ou non, rejoignez-nous et tentez l’aventure sportive avec les sections du VUC.</p>
+        </div>
+        <div class="video-container">
+            <video class="hero-video" controls muted>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    <section class="members">
+        <h2>Secrétariat du VUC</h2>
+        <p class="intro-text">
+            Voici les membres qui œuvrent chaque jour pour faire vivre et grandir notre club.
+        </p>
+        <div class="member-gallery">
+            <div class="member-card">
+                <img src="image.jpg" alt="Portrait de Edwige PINSET" >
+                <h3>Edwige PINSET</h3>
+                <p><strong>Secrétaire Comptable</strong></p>
+            </div>
+            <div class="member-card">
+                <img src="image.jpg" alt="Portrait de Sophie DUSSART" >
+                <h3>Sophie DUSSART</h3>
+                <p><strong>Responsable du VUC Vacances</strong></p>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+        <div class="info-content">
+            <div class="left-column">
+                <h3>Où nous trouver ?</h3>
+                <p>
+                    Campus Universitaire du Mont Houy<br>
+                    Bâtiment Eisen<br>
+                    59313 VALENCIENNES CEDEX 9
+                </p>
+            </div>
+
+            <div class="center-column">
+                <h3>Contactez-nous</h3>
+                <p>
+                    Mail : vuc@uphf.fr<br>
+                    Tél. : 03 27 51 12 45<br>
+                    Tél. : 03 27 51 12 46<br>
+                </p>
+            </div>
+
+            <div class="right-column">
+                <h3>Secrétariat :</h3>
+                <p>
+                    Du lundi au vendredi<br>
+                    9 h 00 - 12 h 00<br>
+                    14 h 00 - 17 h 00
+                </p>
+
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slider = document.getElementById("news-slider");
+
+        fetch("Excel/Actualite.xlsx")
+            .then(response => {
+                if (!response.ok) throw new Error("Fichier non trouvé");
+                return response.arrayBuffer();
+            })
+            .then(buffer => {
+                const workbook = XLSX.read(buffer, { type: "buffer" });
+
+                const sheetName = workbook.SheetNames[0]; // Feuille 2
+                const sheet = workbook.Sheets[sheetName];
+                const data = XLSX.utils.sheet_to_json(sheet);
+
+                const latestNews = data.slice(-6).reverse(); // Dernières 6 actus
+                let index = 0;
+
+                function showNews(i) {
+                    const item = latestNews[i];
+                    if (!item) return;
+
+                    slider.innerHTML = ""; // Vider contenu
+
+                    const card = document.createElement("div");
+                    card.className = "news-card animate-in";
+                    card.innerHTML = `
+                        <div class="news-content">
+                            <h3>${item.Titre || "Sans titre"}</h3>
+                            <p>${item.Description || ""}</p>
+                            ${item.Sport && item.Sport !== "Tous" ? `<span class="sport-tag">${item.Sport}</span>` : ""}
+                        </div>
+                        ${item.Image ? `<img src="${item.Image}" alt="${item.Titre}" class="news-image">` : ""}
+                    `;
+
+                    slider.appendChild(card);
+
+                    setTimeout(() => {
+                        card.classList.remove("animate-in");
+                        card.classList.add("animate-out");
+                    }, 2000);
+
+                    setTimeout(() => {
+                        index = (index + 1) % latestNews.length;
+                        showNews(index);
+                    }, 3000);
+                }
+
+                showNews(index);
+            })
+            .catch(error => {
+                console.error("Erreur :", error);
+                slider.innerHTML = "<p>Impossible de charger les actualités.</p>";
+            });
+    });
+</script>
+<div id="footer-container"></div>
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+        });
+</script>
+</body>
+</html>
+
+
+

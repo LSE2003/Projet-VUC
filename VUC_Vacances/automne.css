@@ -1,0 +1,44 @@
+.automne-body {
+    background: linear-gradient(to bottom, #FFF3E0, #FBE9E7); /* beige feuillu vers orange doux */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4E342E; /* brun intense */
+}
+
+.automne-body .section-header {
+    background: linear-gradient(to right, #FF7043, #D84315); /* rouille orangée */
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: #fff;
+    text-align: center;
+}
+
+.automne-body .section h2 {
+    font-family: 'Marcellus SC', serif;
+    font-size: 2.2em;
+    color: #BF360C;
+    text-align: center;
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+.automne-body .section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #FFAB91, #FF8A65);
+    border-radius: 4px;
+}
+
+.automne-body .btn-green {
+    background-color: #FF5722;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.automne-body .btn-green:hover {
+    background-color: #E64A19;
+    transform: translateY(-3px);
+}

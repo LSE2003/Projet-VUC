@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #006666; /* Optionnel si l'image ne couvre pas tout */
+    color: #e0f7f7;
+
+    background-image: url('../Fond/fond.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: inset 0 -20px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Héros */
+.hero {
+    display: flex;
+    flex-direction: column; /* Assurez-vous que les éléments sont empilés verticalement */
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.hero-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f0f4f8; /* Couleur de fond douce */
+}
+
+.text-hero {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    border: 1px solid #d8e0e8;
+}
+
+.text-hero h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0a3447;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.text-hero p {
+    font-size: 1.3rem;
+    color: #1c1f33;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-video {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Effet au survol */
+.hero-video:hover {
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+
+.members {
+    background: #eaf6f6; /* même fond doux que .info */
+    border-radius: 16px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.members .intro-text {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-style: italic;
+}
+
+.member-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.member-card p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Grand encadré fond bleu très clair */
+.info {
+    background: #eaf6f6; /* doux et clair */
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cartes des colonnes avec fond blanc */
+.left-column,
+.center-column,
+.right-column {
+    flex: 1;
+    min-width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Survol pour effet moderne */
+.left-column:hover,
+.center-column:hover,
+.right-column:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres */
+.info h3 {
+    color: #0a3447; /* bleu nuit profond */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Textes */
+.info p {
+    color: #1c1f33; /* gris foncé / noir doux */
+    margin: 5px 0 15px;
+    line-height: 1.6;
+}
+
+/* Conteneur des 3 colonnes */
+.info-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Titres */
+.info h3 {
+    color: #0077b6;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Textes */
+.info p {
+    color: #333;
+    margin: 5px 0 15px;
+    line-height: 1.6;
+}
+
+
+
+

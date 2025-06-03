@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUC Vacances</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inclure Three.js et Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.cells.min.js" defer></script>
+    <link rel="stylesheet" href="Vuc_vacances.css" >
+</head>
+<body>
+
+<header class="header">
+    <h1 class="header-title">VUC Vacances</h1>
+    <div class="header-image">
+        <img src="../VUC_Vacances_Documents/slogan.jpeg" alt="Slogan VUC Vacances">
+    </div>
+</header>
+<!-- SAISONS -->
+<section class="section saisons">
+    <div class="saisons-grid">
+        <div class="saison-card toussaint">
+            <div class="emoji">🍂</div>
+            <h3>Toussaint</h3>
+            <p>Un séjour d’automne magique ! </p>
+            <p> 1 à 2 semaines d’activités </p>
+            <a href="automne.html" class="btn btn-orange">Voir les séjours</a>
+        </div>
+        <div class="saison-card hiver">
+            <div class="emoji">❄️</div>
+            <h3>Hiver</h3>
+            <p>Venez profiter des activités hivernales </p>
+            <p> 1 à 2 semaines d’activités </p>
+            <a href="hiver.html" class="btn btn-blue">Voir les séjours</a>
+        </div>
+        <div class="saison-card printemps">
+            <div class="emoji">🌸</div>
+            <h3>Printemps</h3>
+            <p>Découvrez les séjours printaniers </p>
+            <p> 1 à 2 semaines d’activités </p>
+            <a href="printemps.html" class="btn btn-pink">Voir les séjours</a>
+        </div>
+        <div class="saison-card ete">
+            <div class="emoji">☀️</div>
+            <h3>Été</h3>
+            <p>Les aventures estivales commencent ici ! </p>
+            <p> 3 à 4 semaines d’activités </p>
+            <a href="ete.html" class="btn btn-yellow">Voir les séjours</a>
+        </div>
+    </div>
+</section>
+
+<!-- INFOS PRATIQUES -->
+<section class="section infos">
+    <h2 class="section-title">Informations Pratiques</h2>
+    <div class="infos-grid">
+        <div class="card">
+            <h3>Nos propositions</h3>
+            <p><strong>3–5 ans :</strong> programme multisports ludique à thème chaque semaine.</p>
+            <p><strong>6–12 ans & 13–17 ans :</strong> multisports, stages sportifs ou culturels.</p>
+        </div>
+        <div class="card">
+            <h3>Une journée type</h3>
+            <ul>
+                <li>09h00 : Arrivée</li>
+                <li>09h15 : Activité sportive</li>
+                <li>10h30 : Collation</li>
+                <li>10h45 : Activité</li>
+                <li>12h00–13h30 : Repas + temps calme</li>
+                <li>13h45 : Activité</li>
+                <li>15h15 : Collation</li>
+                <li>15h30 : Activité sportive</li>
+                <li>17h00 : Départ</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Que faut-il amener ?</h3>
+            <div class="two-cols">
+                <div>
+                    <h4>À prévoir :</h4>
+                    <ul>
+                        <li>Tenue sportive + baskets</li>
+                        <li>Sac à dos avec :
+                            <ul>
+                                <li>Tenue de rechange (maternelle)</li>
+                                <li>Casquette, crème solaire</li>
+                                <li>Gourde</li>
+                                <li>Deux goûters</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>   Inscriptions  </h3>
+            <p>🖥️ En ligne uniquement</p>
+            <p>📞 Problème ? <strong>03 27 51 12 45</strong></p>
+            <p>⏳ Inscriptions à la semaine</p>
+            <p><strong>📎 Documents :</strong></p>
+            <ul class="inline-list">
+                <li>Dossier d’inscription</li>
+                <li>Règlement (CB ou chèque)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- QUI SOMMES-NOUS -->
+<section class="section qui">
+    <h2 class="section-title">Qui sommes-nous ?</h2>
+    <div class="qui-container">
+        <div class="qui-intro">
+            <p><strong>VUC Vacances</strong> est un accueil de loisirs sans hébergement (ALSH) à dominante sportive, ouvert aux enfants et adolescents de <strong>3 à 17 ans</strong>. Il s’adresse à un public diversifié motivé par la découverte et la pratique d’activités <strong>sportives</strong>, <strong>culturelles</strong> et <strong>événementielles</strong> dans un cadre ludique et éducatif.</p>
+            <p>Ce projet s’inscrit dans la tradition éducative des clubs universitaires.</p>
+        </div>
+        <div class="qui-grid">
+            <div class="card">
+                <h3>Un encadrement de qualité</h3>
+                <p>Les activités sont encadrées par des <strong>professionnels diplômés</strong> (BAFA, BAFD, BPJEPS, BE), sélectionnés pour leur expérience, leur sérieux et leur relationnel avec les enfants.</p>
+                <p>Nous collaborons avec les sections sportives du <strong>Valenciennes Université Club</strong> et les étudiants de la <strong>Faculté des Sports de l’Université de Valenciennes</strong>.</p>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Lieux de fonctionnement</h3>
+            <ul>
+                <li>Gymnase du campus universitaire du Mont Houy (Valenciennes)</li>
+                <li>Siège du club – Le Mont Houy (salle de réunion)</li>
+            </ul>
+            <img src="../VUC_Vacances_Documents/Plan_Campus.png" alt="Plan du campus" class="plan-campus">
+        </div>
+        <div class="card">
+            <h3>Un savoir-faire labellisé</h3>
+            <p>Le VUC Vacances est affilié à :</p>
+            <ul>
+                <li><strong>UNCU</strong> (Union Nationale des Clubs Universitaires)</li>
+                <li><strong>UNALVADOS</strong> (Union Nationale des Accueils de Loisirs et de Vacances à Dominante Sportive)</li>
+            </ul>
+            <p>Nous partageons les valeurs et engagements de ces organismes, notamment la <strong>Charte pour un sport éthique</strong>.</p>
+        </div>
+        <div class="qui-message">
+            Un projet éducatif et pédagogique clair et engagé
+        </div>
+    </div>
+</section>
+</body>
+</html>
+

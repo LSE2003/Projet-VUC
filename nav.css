@@ -1,0 +1,56 @@
+.vanta-header {
+    position: relative;
+    overflow: hidden;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #168791;
+    z-index: 0;
+}
+
+
+
+.vanta-header * {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: #22a9b6;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 151, 167, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #004d40;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 151, 167, 0.15);
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #0097a7;
+    border: 2px solid #004d40;
+    box-shadow: 0 6px 12px rgba(0, 151, 167, 0.3);
+    transform: translateY(-3px);
+}
