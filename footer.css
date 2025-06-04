@@ -46,3 +46,49 @@
 .social-icons a:hover img {
     filter: brightness(0) invert(1);
 }
+
+@media (max-width: 768px) {
+    .section-footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.95rem;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .section-footer p {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .social-icons a {
+        padding: 8px;
+    }
+
+    .social-icons a img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-footer {
+        padding: 1rem 0.5rem;
+    }
+
+    .section-footer p {
+        font-size: 0.95rem;
+    }
+
+    .social-icons {
+        gap: 0.8rem;
+    }
+
+    .social-icons a img {
+        width: 18px;
+        height: 18px;
+    }
+}

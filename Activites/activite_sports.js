@@ -77,6 +77,20 @@ document.addEventListener("DOMContentLoaded", () => {
             const tarifsText = infos["Tarifs"] || "";
             const lignes = tarifsText.split("\n").filter(ligne => ligne.trim() !== "");
 
+
+// Étape 1 : Grouper par tarif
+            const tarifsGroupes = {};
+
+            lignes.forEach(ligne => {
+                const [label, value] = ligne.split(":").map(item => item.trim());
+                if (label && value) {
+                    if (!tarifsGroupes[value]) {
+                        tarifsGroupes[value] = [];
+                    }
+                    tarifsGroupes[value].push(label);
+                }
+            });
+
             const table2 = document.createElement("table");
             table2.classList.add("table", "table-bordered", "mb-4");
 
@@ -84,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const headerRow2 = document.createElement("tr");
             const th2 = document.createElement("th");
             th2.colSpan = 2;
-            th2.textContent = "Cotisation VUC Omnisports";
+            th2.textContent = "Cotisation VUC";
             headerRow2.appendChild(th2);
             thead2.appendChild(headerRow2);
             table2.appendChild(thead2);

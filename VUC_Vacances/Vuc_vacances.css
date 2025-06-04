@@ -227,3 +227,82 @@ ul li {
     margin: 0 auto; /* pour centrer l'image */
 }
 
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .saisons-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .saison-card {
+        padding: 1rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+    }
+
+    .infos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .qui-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qui-message {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .two-cols {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    ul li {
+        font-size: 0.95rem;
+    }
+
+    .emoji {
+        font-size: 1.5rem;
+    }
+
+    .qui-message {
+        font-size: 0.9rem;
+    }
+}

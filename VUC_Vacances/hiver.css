@@ -45,3 +45,91 @@
     background-color: #01579B;
     transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+    .hiver-body {
+        font-size: 0.95rem;
+    }
+
+    .hiver-body .section-header {
+        padding: 16px;
+        font-size: 1.1rem;
+    }
+
+    .hiver-body .section {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hiver-body .section h2 {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+    }
+
+    .hiver-body .section h2::after {
+        width: 60px;
+        height: 3px;
+        bottom: -8px;
+    }
+
+    .hiver-body .btn-green {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .hiver-body p {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+
+    .hiver-body .card,
+    .hiver-body .bloc,
+    .hiver-body .col {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+
+    .hiver-body .row,
+    .hiver-body .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hiver-body {
+        font-size: 0.9rem;
+    }
+
+    .hiver-body .section {
+        padding: 0.8rem;
+    }
+
+    .hiver-body .section-header {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .hiver-body .section h2 {
+        font-size: 1.4rem;
+    }
+
+    .hiver-body .section h2::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .hiver-body p {
+        font-size: 0.9rem;
+    }
+
+    .hiver-body .btn-green {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        width: 90%;
+    }
+}

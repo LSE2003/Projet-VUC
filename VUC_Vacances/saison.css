@@ -247,42 +247,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* RESPONSIVE TABLE */
-@media (max-width: 600px) {
-    .tarif-table thead {
-        display: none;
-    }
-
-    .tarif-table, .tarif-table tbody, .tarif-table tr, .tarif-table td {
-        display: block;
-        width: 100%;
-    }
-
-    .tarif-table tr {
-        margin-bottom: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .tarif-table td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    .tarif-table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 1rem;
-        width: 45%;
-        font-weight: bold;
-        text-align: left;
-        color: #333;
-    }
-}
-
 /* ANIMATIONS */
 @keyframes fadeIn {
     from {
@@ -306,14 +270,6 @@ body {
     }
 }
 
-
-@media (max-width: 600px) {
-    .inscription-grid {
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
-
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -322,6 +278,96 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-subtitle {
+        font-size: 1rem;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .section {
+        margin: 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.4rem;
+    }
+
+    .section ul li {
+        font-size: 0.95rem;
+    }
+
+    .inscription-grid {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .inscription-grid .btn {
+        flex: none;
+        width: 100%;
+    }
+
+    .tarif-table th,
+    .tarif-table td {
+        font-size: 0.9rem;
+        padding: 12px 14px;
+    }
+
+    .falling-leaves img {
+        width: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.7rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .section h2 {
+        font-size: 1.25rem;
+    }
+
+    .section ul li {
+        font-size: 0.9rem;
+    }
+
+    .inscription-grid .btn {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .tarif-table td::before {
+        font-size: 0.85rem;
     }
 }
 

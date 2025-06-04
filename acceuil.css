@@ -204,6 +204,61 @@ body {
     line-height: 1.6;
 }
 
+/* Adaptation mobile */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .text-hero {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+
+    .text-hero h2 {
+        font-size: 2rem;
+    }
+
+    .text-hero p {
+        font-size: 1rem;
+    }
+
+    .video-container {
+        height: auto;
+    }
+
+    .hero-video {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column,
+    .center-column,
+    .right-column {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .members {
+        padding: 20px 10px;
+    }
+
+    .member-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-card {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
 
 
 

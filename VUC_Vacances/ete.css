@@ -66,3 +66,160 @@
     background-color: #E64A19;
     transform: translateY(-3px);
 }
+
+.ete-body {
+    background: linear-gradient(to bottom, #FFF5E1, #FFE0B2); /* sable clair vers abricot */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #6D4C41; /* brun doux */
+}
+
+.ete-body .section-header {
+    background: linear-gradient(to right, #FFB74D, #FF8A65); /* coucher de soleil orangé */
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #fff8f0;
+    text-align: center;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+.ete-body .section h2 {
+    font-family: 'Marcellus SC', serif;
+    font-size: 2.2em;
+    color: #D84315; /* orange profond */
+    position: relative;
+    margin-bottom: 24px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+.ete-body .section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #FFD180, #FFAB40); /* ligne dorée / sable chaud */
+    border-radius: 4px;
+}
+
+.ete-body .section a {
+    color: #EF6C00; /* orange foncé chaud */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.ete-body .section a:hover {
+    color: #BF360C;
+    transform: scale(1.08);
+}
+
+.ete-body .btn-green {
+    background-color: #F57C00; /* orange intense */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+    font-size: 1rem;
+}
+
+.ete-body .btn-green:hover {
+    background-color: #E64A19;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .ete-body {
+        font-size: 0.95rem;
+    }
+
+    .ete-body .section-header {
+        padding: 16px;
+        font-size: 1.1rem;
+    }
+
+    .ete-body .section {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .ete-body .section h2 {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+    }
+
+    .ete-body .section h2::after {
+        width: 60px;
+        height: 3px;
+        bottom: -8px;
+    }
+
+    .ete-body .btn-green {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .ete-body p {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+
+    .ete-body .card,
+    .ete-body .bloc,
+    .ete-body .col {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+
+    .ete-body .row,
+    .ete-body .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .ete-body {
+        font-size: 0.9rem;
+    }
+
+    .ete-body .section {
+        padding: 0.8rem;
+    }
+
+    .ete-body .section-header {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .ete-body .section h2 {
+        font-size: 1.4rem;
+    }
+
+    .ete-body .section h2::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .ete-body p {
+        font-size: 0.9rem;
+    }
+
+    .ete-body .btn-green {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        width: 90%;
+    }
+}
