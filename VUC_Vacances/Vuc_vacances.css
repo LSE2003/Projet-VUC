@@ -10,19 +10,6 @@ body {
     z-index: -3;
 }
 
-/*
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-*/
-
 .header {
     padding: 2rem;
     border-bottom-left-radius: 1.5rem;
@@ -45,9 +32,6 @@ body {
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
-
-
-
 
 .section {
     padding: 3rem 1rem;
@@ -138,10 +122,9 @@ body {
     height: auto;
 }
 
-
 .card h3 {
     font-size: 1.25rem;
-    color: #dd0953;
+    color: rgba(175, 54, 255, 0.69);
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -171,7 +154,7 @@ ul li {
     font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
-    color: #9b4eed;
+    color: #7f25e1;
     margin-bottom: 1.5rem;
 }
 
@@ -180,6 +163,11 @@ ul li {
     max-width: 960px;
     margin: 0 auto;
     color: #374151;
+}
+
+.qui-grid .card {
+    background-color: #c4fdc4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .qui-intro {
@@ -192,18 +180,6 @@ ul li {
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     margin-bottom: 2rem;
-}
-
-/* Cartes */
-.card {
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
 }
 
 .card ul {
@@ -226,6 +202,29 @@ ul li {
     height: auto;
     display: block;
     margin: 0 auto; /* pour centrer l'image */
+}
+
+.recrutement-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #e0f2fe; /* bleu pâle */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #1e3a8a;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.recrutement-container ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.recrutement-container a {
+    color: #1d4ed8;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -279,6 +278,29 @@ ul li {
     .two-cols {
         grid-template-columns: 1fr;
     }
+
+    .qui-container {
+        padding: 0 1rem;
+    }
+
+    .qui-grid {
+        gap: 1rem;
+    }
+
+    .qui-grid .card {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .qui-grid .card h3 {
+        color: #065f46;
+    }
+
+    .recrutement-container {
+        padding: 1.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
 }
 
 @media (max-width: 480px) {

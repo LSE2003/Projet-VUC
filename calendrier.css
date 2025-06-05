@@ -72,12 +72,10 @@ body {
     padding: 5px;
     font-size: 12px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    word-wrap: break-word; /* Permet au texte de revenir à la ligne */
-    white-space: normal;   /* Permet au texte de s'étendre sur plusieurs lignes */
-    max-width: 100%; /* Assure que le texte ne dépasse pas la largeur du bloc */
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
 }
-
-
 
 .fc .fc-event:hover {
     transform: scale(1.1);

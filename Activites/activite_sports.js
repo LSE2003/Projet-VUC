@@ -92,13 +92,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const tbody2 = document.createElement("tbody");
 
             lignes.forEach(ligne => {
-                const [label, value] = ligne.split(":").map(item => item.trim());
-                if (label && value) {
+                const lastColonIndex = ligne.lastIndexOf(":");
+                if (lastColonIndex !== -1) {
+                    const label = ligne.slice(0, lastColonIndex).trim();
+                    const value = ligne.slice(lastColonIndex + 1).trim();
                     const row = document.createElement("tr");
                     const cellLabel = document.createElement("td");
-                    cellLabel.textContent = label;
                     const cellValue = document.createElement("td");
+                    cellLabel.innerHTML = label.replace(/, /g, "<br>"); // retour à la ligne après chaque ", "
                     cellValue.textContent = value;
+                    cellValue.style.verticalAlign = "middle";
+                    cellValue.style.textAlign = "center";
+                    cellValue.style.whiteSpace = "nowrap";
                     row.appendChild(cellLabel);
                     row.appendChild(cellValue);
                     tbody2.appendChild(row);
