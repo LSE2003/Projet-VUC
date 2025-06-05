@@ -77,20 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const tarifsText = infos["Tarifs"] || "";
             const lignes = tarifsText.split("\n").filter(ligne => ligne.trim() !== "");
 
-
-// Étape 1 : Grouper par tarif
-            const tarifsGroupes = {};
-
-            lignes.forEach(ligne => {
-                const [label, value] = ligne.split(":").map(item => item.trim());
-                if (label && value) {
-                    if (!tarifsGroupes[value]) {
-                        tarifsGroupes[value] = [];
-                    }
-                    tarifsGroupes[value].push(label);
-                }
-            });
-
             const table2 = document.createElement("table");
             table2.classList.add("table", "table-bordered", "mb-4");
 

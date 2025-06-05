@@ -2,13 +2,15 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    background-image: url('../Fond/fond_vacances.jpg');
+    height: 100%;
+    background-image: url('../Fond/fond_vacances1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: -3;
 }
 
+/*
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -19,8 +21,8 @@ body {
         transform: translateY(0);
     }
 }
+*/
 
-/* Header */
 .header {
     padding: 2rem;
     border-bottom-left-radius: 1.5rem;
@@ -46,11 +48,10 @@ body {
 
 
 
-/* Sections */
+
 .section {
     padding: 3rem 1rem;
     animation: fadeIn 1s ease-in;
-    background-color: #fff;
 }
 
 .section-title {
@@ -109,7 +110,7 @@ body {
     transform: scale(1.05);
 }
 
-.printemps { background-color: rgba(255, 0, 98, 0.41); }
+.printemps { background-color: rgb(255, 0, 195); }
 .ete { background-color: #fde047; }
 .toussaint { background-color: #fdba74; }
 .hiver { background-color: #06dddd; }
@@ -132,8 +133,8 @@ body {
 .card {
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    background-color: rgba(241, 153, 153, 0.56);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+    background-color: rgb(241, 153, 153);
     height: auto;
 }
 
