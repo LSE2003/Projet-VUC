@@ -149,14 +149,33 @@ ul li {
     margin-bottom: 0.5rem;
 }
 
-/* Titres */
+/* Titres
 .section-title {
     font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
-    color: #7f25e1;
+    color: #7b05ca;
     margin-bottom: 1.5rem;
+} */
+
+.section-title {
+    font-size: 2rem;              /* Plus grand, plus impactant */
+    text-align: center;
+    font-weight: 700;             /* Plus marqué */
+    color: #f60529;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;       /* Espacement entre les lettres */
+    text-shadow: 1px 1px 3px rgba(123, 5, 202, 0.3); /* légère ombre douce */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+    transition: color 0.3s ease;
 }
+
+.section-title:hover {
+    color: #9e0f75;               /* Couleur qui s'éclaircit au survol */
+    cursor: default;
+}
+
 
 /* QUI SOMMES-NOUS */
 .qui-container {
@@ -168,11 +187,6 @@ ul li {
 .qui-grid .card {
     background-color: #c4fdc4;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.qui-intro {
-    text-align: center;
-    margin-bottom: 2rem;
 }
 
 .qui-grid {
@@ -187,15 +201,6 @@ ul li {
     padding-left: 1.25rem;
 }
 
-.qui-message {
-    background-color: #fde68a;
-    padding: 1rem;
-    border-radius: 9999px;
-    text-align: center;
-    font-weight: 600;
-    color: #1f2937;
-    margin-top: 2rem;
-}
 
 .plan-campus {
     max-width: 100%;
@@ -325,7 +330,4 @@ ul li {
         font-size: 1.5rem;
     }
 
-    .qui-message {
-        font-size: 0.9rem;
-    }
 }

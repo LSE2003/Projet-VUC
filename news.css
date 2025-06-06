@@ -130,7 +130,7 @@ body {
     margin-top: 8px;
 }
 
-/* Image à droite */
+/* Image à droite
 .news-image {
     width: 220px;
     height: 140px;
@@ -138,6 +138,13 @@ body {
     border-radius: 10px;
     flex-shrink: 0;
     align-self: center;
+} */
+.news-image {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Responsive */

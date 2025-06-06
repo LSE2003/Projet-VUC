@@ -58,7 +58,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
-        const sportFiltré = (urlParams.get('sport') || 'Tous').trim().toLowerCase();
+        const sportFiltre = (urlParams.get('sport') || 'Tous').trim().toLowerCase();
 
         const container = document.getElementById('news-slider');
 
@@ -73,17 +73,17 @@
                 const sheet = workbook.Sheets[sheetName];
                 const data = XLSX.utils.sheet_to_json(sheet);
 
-                const actualitesFiltrées = data.filter(item => {
+                const actualitesFiltrees = data.filter(item => {
                     const sport = (item.Sport || '').trim().toLowerCase();
-                    return sportFiltré === 'tous' || sport === sportFiltré;
+                    return sportFiltre === 'tous' || sport === sportFiltre;
                 });
 
-                if (actualitesFiltrées.length === 0) {
+                if (actualitesFiltrees.length === 0) {
                     container.innerHTML = `<p>Aucune actualité disponible pour le sport : ${sportFiltré}</p>`;
                     return;
                 }
 
-                actualitesFiltrées.forEach(item => {
+                actualitesFiltrees.forEach(item => {
                     const card = document.createElement('div');
                     card.className = 'news-card';
                     card.innerHTML = `
@@ -91,8 +91,9 @@
                             <h3>${item.Titre || ''}</h3>
                             <p>${item.Article || ''}</p>
                             ${(item.Sport && item.Sport.toLowerCase() !== 'tous') ? `<span class="sport-tag">${item.Sport}</span>` : ''}
+                            ${item.Image ? `<img src="${item.Image}" alt="${item.Titre}" class="news-image">` : ''}
                         </div>
-                        ${item.Image ? `<img src="${item.Image}" alt="${item.Titre}" class="news-image">` : ''}
+
                     `;
                     container.appendChild(card);
                 });

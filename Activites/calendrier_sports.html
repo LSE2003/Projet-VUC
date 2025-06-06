@@ -53,7 +53,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         const calendarEl = document.getElementById('calendar');
         const urlParams = new URLSearchParams(window.location.search);
-        const sportFiltré = (urlParams.get('sport') || 'Judo').trim().toLowerCase();
+        const sportFiltre = (urlParams.get('sport') || 'Judo').trim().toLowerCase();
 
         const sportColors = {
             'aviron': '#67e8ed',
@@ -97,7 +97,7 @@
                 const events = data
                     .filter(item => {
                         const sport = item.Sport?.toString().trim().toLowerCase();
-                        return sport && sport === sportFiltré;
+                        return sport && sport === sportFiltre;
                     })
                     .map(item => ({
                         title: item.Nom || 'Sans titre',
