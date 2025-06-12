@@ -104,6 +104,36 @@ body {
     margin-bottom: 0.75rem;
 }
 
+.fb-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.fb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    background-color: #1877f2;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fb-link:hover {
+    background-color: #145dbf;
+    transform: scale(1.05);
+}
+
+/* Facebook Icon (if any) */
+.fb-icon {
+    font-size: 1.4rem;
+}
+
 /* Infos pratiques */
 .infos-grid {
     max-width: 800px;
@@ -149,14 +179,6 @@ ul li {
     margin-bottom: 0.5rem;
 }
 
-/* Titres
-.section-title {
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: bold;
-    color: #7b05ca;
-    margin-bottom: 1.5rem;
-} */
 
 .section-title {
     font-size: 2rem;              /* Plus grand, plus impactant */
@@ -273,6 +295,7 @@ ul li {
 
     .qui-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .qui-message {
@@ -286,10 +309,6 @@ ul li {
 
     .qui-container {
         padding: 0 1rem;
-    }
-
-    .qui-grid {
-        gap: 1rem;
     }
 
     .qui-grid .card {
@@ -306,6 +325,15 @@ ul li {
         font-size: 0.95rem;
     }
 
+    /* Facebook bouton responsive */
+    .fb-link {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+
+    .fb-icon {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -330,4 +358,13 @@ ul li {
         font-size: 1.5rem;
     }
 
+    /* Facebook bouton encore plus petit pour petits écrans */
+    .fb-link {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .fb-icon {
+        font-size: 1rem;
+    }
 }
